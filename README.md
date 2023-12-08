@@ -2,6 +2,9 @@
 
 This flight tracker allows you to monitor flights in real-time.
 
+https://github.com/Manzanabel/flight-tracker-dashboard/assets/128307128/883c3531-7a7c-40eb-90fd-55a1d2e3ae56
+
+
 ### Key Features:
 
 - Integrated map highlighting the current positions of all flights.
@@ -15,13 +18,13 @@ First, clone this project:
 `https://github.com/Manzanabel/flight-tracker-dashboard.git`
 
 And the server (follow the installation and launching instructions before continuing):
-`coming soon`
+[Flight Tracker Server](https://github.com/Manzanabel/flight-tracker-server)
 
 Secondly, create an `.env` file with the following keys:
 
 ```
 VITE_GOOGLE_MAPS_API_KEY='your key'
-VITE_AVIATION_STACK_API_KEY='your key'
+VITE_AVIATION_STACK_API_KEY='your key' //(not mandatory)
 VITE_PEXELS_API_KEY='your key'
 ```
 
