@@ -1,7 +1,8 @@
 ## Flight Tracker
 
 This flight tracker allows you to monitor flights in real-time.
-![image](https://github.com/Manzanabel/flight-tracker-dashboard/assets/128307128/a26d4c20-a447-4ed0-8ec8-536146e4d869)
+
+https://github.com/Manzanabel/flight-tracker-dashboard/assets/128307128/883c3531-7a7c-40eb-90fd-55a1d2e3ae56
 
 
 ### Key Features:
