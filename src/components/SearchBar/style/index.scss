@@ -1,0 +1,20 @@
+@import "./../../../utilities/scss/variables.scss";
+
+.searchbar {
+  &-container {
+    display: flex;
+    align-items: start;
+    padding: 0;
+    position: relative;
+    display: flex;
+  }
+
+  &-input {
+    height: $searchbar-height;
+    width: $searchbar-width;
+    padding: 0;
+    margin-right: 0.05em;
+    border: 0;
+    color: $color-main-text;
+  }
+}

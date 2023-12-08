@@ -1,0 +1,17 @@
+.chart {
+  &-data {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-pie {
+    flex-grow: 4;
+  }
+  &-legend {
+    margin-left: 3em;
+    font-size: 12px;
+  }
+  &-instruction {
+    margin-top: 1em;
+    font-size: 12px;
+  }
+}

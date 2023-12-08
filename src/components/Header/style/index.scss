@@ -1,0 +1,27 @@
+@import "./../../../utilities/scss/variables.scss";
+
+.header {
+  background: linear-gradient(
+    to top,
+    rgba(254, 254, 254, 0),
+    rgb(19, 146, 149, 1)
+  );
+  height: 20vh;
+  width: 100vw;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+
+  &-title {
+    color: $color-light-text;
+    font-family: "Oswald";
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+  }
+  &-logo {
+    padding-right: 1em;
+  }
+}

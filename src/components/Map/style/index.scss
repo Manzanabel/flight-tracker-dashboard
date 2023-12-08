@@ -1,0 +1,12 @@
+.basemap {
+  &-container {
+    border-radius: 8%;
+    height: auto;
+    width: "18em";
+  }
+
+  &-map {
+    width: "18em";
+    height: "18em";
+  }
+}

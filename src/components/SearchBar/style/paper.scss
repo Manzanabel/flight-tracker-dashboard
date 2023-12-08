@@ -1,0 +1,25 @@
+@import "./../../../utilities/scss/variables.scss";
+
+.paper {
+  &-container {
+    background-color: #fafafa;
+    height: auto;
+    z-index: 10;
+    position: absolute;
+    top: $searchbar-height;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-width: $searchbar-width;
+    color: $color-main-text;
+
+    > ul {
+      padding: 0;
+      margin: 0;
+      > li:hover {
+        background-color: #139295;
+        color: #fafafa;
+      }
+    }
+  }
+}
