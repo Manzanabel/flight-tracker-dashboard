@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Card } from "../../components/Card/Card";
 import { useGetPhoto } from "../../queries/useGetPhoto/useGetPhoto";
 import { useStore } from "../../store/store";
@@ -9,7 +10,15 @@ const SingleResultCard = () => {
     currentFlight?.aircraft.iata || "plane"
   );
 
-  const imageSrc = pictureList?.photos ? pictureList?.photos[0].src.small : "";
+  const [imageSrc, setImageSrc] = useState("");
+
+  useEffect(() => {
+    console.log(
+      pictureList && pictureList.photos && pictureList?.photos[0].src.small
+    );
+    if (pictureList?.photos && pictureList?.photos.length > 0)
+      setImageSrc(pictureList?.photos[0].src.small);
+  }, [pictureList]);
 
   return (
     <Card

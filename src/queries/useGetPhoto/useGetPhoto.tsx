@@ -10,11 +10,9 @@ const defaultOptions = {
 };
 
 const getPictures = async (keyword: string) => {
-  console.log("keyword", keyword);
-  console.log("url", `${BASE_URL}${keyword}`)
   try {
     const pictures = await fetch(`${BASE_URL}${keyword}`, defaultOptions);
-    const parsePictures = await pictures.json();
+    const parsePictures: PhotosReturnType = await pictures.json();
 
     return parsePictures;
   } catch (error) {

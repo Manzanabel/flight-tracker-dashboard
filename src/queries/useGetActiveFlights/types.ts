@@ -67,7 +67,7 @@ export interface FlightCodes {
   number: string;
   iata: string;
   icao: string;
-  codeshared: any;
+  codeshared: string;
 }
 
 export interface Aircraft {

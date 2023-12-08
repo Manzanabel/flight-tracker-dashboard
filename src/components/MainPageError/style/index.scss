@@ -1,0 +1,18 @@
+.errorpage {
+  &-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #6f9cb3;
+  }
+
+  &-elements {
+    padding: 25vh;
+    text-align: center;
+  }
+
+  &-image {
+    width: 20rem;
+    height: auto;
+  }
+}

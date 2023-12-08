@@ -5,6 +5,9 @@
   }
   &-pie {
     flex-grow: 4;
+    svg {
+      cursor: pointer;
+    }
   }
   &-legend {
     margin-left: 3em;

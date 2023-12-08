@@ -1,4 +1,10 @@
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
+import {
+  APIProvider,
+  AdvancedMarker,
+  Map,
+  Marker,
+  Pin,
+} from "@vis.gl/react-google-maps";
 import { defaultCoords } from "./constants";
 import { Flight, useGetActiveFlights } from "../../queries";
 import { useStore } from "../../store/store";
@@ -28,9 +34,23 @@ export const BaseMap = () => {
           center={getCoords(currentFlight)}
           gestureHandling={"greedy"}
           disableDefaultUI={true}
+          mapId="myId"
         >
-          {currentFlights?.liveFlights.map((data, index) => (
-            <Marker key={index} position={getCoords(data)} />
+          {currentFlights?.liveFlights.map((flight, index) => (
+            <AdvancedMarker key={index} position={getCoords(flight)}>
+              <Pin
+                background={"#FBBC04"}
+                glyphColor={"#000"}
+                borderColor={"#000"}
+                scale={
+                  flight.flight.iata === currentFlight?.flight.iata ? 1.7 : 1
+                }
+              >
+                {flight.flight.iata === currentFlight?.flight.iata && (
+                  <p>{currentFlight.flight.iata}</p>
+                )}
+              </Pin>
+            </AdvancedMarker>
           ))}
         </Map>
       </APIProvider>

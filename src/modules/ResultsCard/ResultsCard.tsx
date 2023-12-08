@@ -32,9 +32,17 @@ const getFlightsByCompany = (flights: Flight[], company: string) =>
 
 export const ResultsCard = () => {
   const { data, isLoading, error } = useGetActiveFlights();
-  const { setCurrentFlight, currentCompany } = useStore((state) => state);
+  const { setCurrentFlight, setCurrentCompany, currentCompany } = useStore(
+    (state) => state
+  );
 
   const [flightsToShow, setFlightsToShow] = useState<Flight[] | null>(null);
+
+  const handleOnClose = () => {
+    if (currentCompany) {
+      setCurrentCompany(null);
+    }
+  };
 
   useEffect(() => {
     //if a company was chosen, we switch to show only flights by that company
@@ -62,13 +70,13 @@ export const ResultsCard = () => {
 
     if (flightsToShow) {
       return flightsToShow.map((flight: Flight, index: number) => (
-        <div>
+        <div key={index}>
           <li
-            key={index}
             onClick={() => setCurrentFlight(flight)}
-            style={{ cursor: "pointer", fontFamily: "serif" }}
+            style={{ cursor: "pointer" }}
           >
-            {`${flight.airline.name.toUpperCase()}: ${
+            &#9992;
+            {` ${flight.airline.name.toUpperCase()}: ${
               flight.departure.airport
             } to ${flight.arrival.airport}`}
           </li>
@@ -82,5 +90,9 @@ export const ResultsCard = () => {
     ? `Current flights by ${currentCompany}`
     : "Some of the current flights";
 
-  return <Card title={title}>{content()}</Card>;
+  return (
+    <Card title={title} onClose={currentCompany ? handleOnClose : undefined}>
+      {content()}
+    </Card>
+  );
 };

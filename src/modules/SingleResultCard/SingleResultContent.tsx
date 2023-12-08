@@ -2,7 +2,7 @@ import { Flight } from "../../queries";
 
 interface SingleResultContentProps {
   currentFlight: Flight;
-  imageSrc: string;
+  imageSrc?: string;
 }
 
 export const SingleResultContent = ({
@@ -20,7 +20,7 @@ export const SingleResultContent = ({
           </div>
         </div>
         <div>
-          <div className="singleresultcard-prep">From</div>
+          <div className="singleresultcard-prep">To</div>
           <p>{currentFlight.arrival.iata}</p>
           <div className="singleresultcard-description">
             {currentFlight.arrival.airport}
@@ -29,7 +29,7 @@ export const SingleResultContent = ({
       </div>
       <div className="singleresultcard-aircraft">
         Aircraft type: {currentFlight.aircraft.iata}
-        <img src={imageSrc} alt="airplane picture" />
+        {imageSrc && <img src={imageSrc} alt="airplane picture" />}
       </div>
     </div>
   );

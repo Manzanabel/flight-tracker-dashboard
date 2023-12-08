@@ -25,5 +25,12 @@
     font-weight: 700;
     color: #837961;
     margin-top: 0.4px;
+    width: 100%;
+    position: relative;
+    span {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
   }
 }
