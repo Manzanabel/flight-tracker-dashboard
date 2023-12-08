@@ -32,9 +32,8 @@ const getFlightsByCompany = (flights: Flight[], company: string) =>
 
 export const ResultsCard = () => {
   const { data, isLoading, error } = useGetActiveFlights();
-  const { setCurrentFlight, setCurrentCompany, currentCompany } = useStore(
-    (state) => state
-  );
+  const { setCurrentFlight, setCurrentCompany, currentCompany, currentFlight } =
+    useStore((state) => state);
 
   const [flightsToShow, setFlightsToShow] = useState<Flight[] | null>(null);
 
@@ -73,7 +72,13 @@ export const ResultsCard = () => {
         <div key={index}>
           <li
             onClick={() => setCurrentFlight(flight)}
-            style={{ cursor: "pointer" }}
+            style={{
+              cursor: "pointer",
+              fontWeight:
+                currentFlight?.flight.iata === flight.flight.iata
+                  ? "bold"
+                  : "normal",
+            }}
           >
             &#9992;
             {` ${flight.airline.name.toUpperCase()}: ${
