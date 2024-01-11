@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import { SearchBarCard } from "./modules";
+import { Header } from "./components/Header/Header";
+import { SearchBarCard } from "./modules/SearchBarCard/SearchBarCard";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import SingleResultCard from "./modules/SingleResultCard/SingleResultCard";

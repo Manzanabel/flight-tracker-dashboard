@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../components/Card/Card";
-import { useGetPhoto } from "../../queries/useGetPhoto/useGetPhoto";
+import { useGetPhoto } from "../../queries/useGetPhoto";
 import { useStore } from "../../store/store";
 import { SingleResultContent } from "./SingleResultContent";
 
@@ -13,9 +13,6 @@ const SingleResultCard = () => {
   const [imageSrc, setImageSrc] = useState("");
 
   useEffect(() => {
-    console.log(
-      pictureList && pictureList.photos && pictureList?.photos[0].src.small
-    );
     if (pictureList?.photos && pictureList?.photos.length > 0)
       setImageSrc(pictureList?.photos[0].src.small);
   }, [pictureList]);

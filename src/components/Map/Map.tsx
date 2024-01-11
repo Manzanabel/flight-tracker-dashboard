@@ -2,14 +2,12 @@ import {
   APIProvider,
   AdvancedMarker,
   Map,
-  Marker,
   Pin,
 } from "@vis.gl/react-google-maps";
 import { defaultCoords } from "./constants";
-import { Flight, useGetActiveFlights } from "../../queries";
+import { Flight, useGetActiveFlights } from "../../queries/useGetActiveFlights";
 import { useStore } from "../../store/store";
 import "./style/index.scss";
-import { useEffect, useState } from "react";
 
 const getCoords = (flight: Flight | null): { lng: number; lat: number } => ({
   lng: flight?.live?.longitude || defaultCoords.center.lng,

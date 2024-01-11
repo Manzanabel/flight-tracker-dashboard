@@ -1,6 +1,6 @@
 import { Chart } from "../../components/Chart/Chart";
 import { Card } from "../../components/Card/Card";
-import { useGetActiveFlights } from "../../queries";
+import { useGetActiveFlights } from "../../queries/useGetActiveFlights";
 
 export const ChartCard = () => {
   const { data, isLoading } = useGetActiveFlights();
