@@ -1,4 +1,4 @@
-import { Flight } from "../../queries";
+import { Flight } from "../../queries/useGetActiveFlights";
 
 interface SingleResultContentProps {
   currentFlight: Flight;

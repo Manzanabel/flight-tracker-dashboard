@@ -1,8 +1,7 @@
 import {
   useGetActiveFlights,
   ActiveFlightsReturnType,
-  Flight,
-} from "../../queries";
+} from "../../queries/useGetActiveFlights";
 import { Card } from "../../components/Card/Card";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
 import { CATEGORIES, Categories } from "../../utilities/constants";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../components/Card/Card";
-import { Flight, useGetActiveFlights } from "../../queries";
+import { Flight, useGetActiveFlights } from "../../queries/useGetActiveFlights";
 import { useStore } from "../../store/store";
 import {
   fallbackMessage,
